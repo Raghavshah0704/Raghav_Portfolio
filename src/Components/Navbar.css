@@ -1,0 +1,119 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #161513;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 170px;
+  height: 80px;
+  margin-bottom: 0;
+}
+.nav-menu{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 52px;
+  font-size: 20px;
+}
+.nav-logo{
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+.nav-connect{
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #DA7C25 0.35%, #8923E1 102.07%);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.nav-connect:hover{
+  transform: scale(1.05);
+  opacity: 0.92;
+}
+.nav-menu li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.nav-menu li p{
+  transition: color 0.2s ease;
+}
+.nav-menu li.active p{
+  color: #ffffff;
+  font-weight: 600;
+}
+.und{
+  display: block;
+  height: 10px;
+  width: 35px;
+}
+.anchor-link{
+  text-decoration: none;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 1100px){
+  .navbar{
+    padding: 0 48px;
+  }
+  .nav-menu{
+    gap: 36px;
+    font-size: 16px;
+  }
+  .nav-connect{
+    padding: 13px 24px;
+    font-size: 14px;
+  }
+  .nav-logo{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 768px){
+  .navbar{
+    padding: 14px 16px;
+    height: auto;
+    justify-content: center;
+    background-color: transparent;
+  }
+  .nav-logo,
+  .nav-connect,
+  .und{
+    display: none;
+  }
+  .nav-menu{
+    gap: 4px;
+    padding: 6px;
+    border-radius: 999px;
+    background-color: rgba(24, 28, 38, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+  }
+  .nav-menu li .anchor-link{
+    display: flex;
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: #cbd5e1;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  .nav-menu li.active .anchor-link{
+    background-color: #ffffff;
+    color: #161513;
+    font-weight: 600;
+  }
+}

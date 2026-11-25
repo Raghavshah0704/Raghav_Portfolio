@@ -1,0 +1,21 @@
+import React from 'react'
+import Navbar from './Components/Navbar'
+import Hero from './Components/Hero'
+import Skills from './Components/Skills'
+import Projects from './Components/Projects'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
+const App = () => {
+  return (
+    <div id="home">
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <Skills></Skills>
+      <Projects></Projects>
+      <Contact></Contact>
+      <Footer></Footer>
+    </div>
+  )
+}
+
+export default App
