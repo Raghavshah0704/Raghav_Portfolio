@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./contact.css";
+import "./Contact.css";
 import theme_pattern from "../assets/theme_pattern.svg";
 import mail_icon from "../assets/mail_icon.svg";
 import location_icon from "../assets/location_icon.svg";
@@ -19,7 +19,7 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
         setStatus("success");
@@ -62,11 +62,26 @@ const Contact = () => {
 
           <form ref={formRef} onSubmit={handleSubmit} className="contact-right">
             <label>Your Name</label>
-            <input type="text" placeholder="Enter your Name" name="from_name" required />
+            <input
+              type="text"
+              placeholder="Enter your Name"
+              name="from_name"
+              required
+            />
             <label>Your Email</label>
-            <input type="email" placeholder="Enter your Email" name="from_email" required />
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              name="from_email"
+              required
+            />
             <label>Write your message here</label>
-            <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Enter your message"
+              required
+            ></textarea>
 
             <button
               type="submit"
