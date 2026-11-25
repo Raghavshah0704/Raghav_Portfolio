@@ -65,16 +65,18 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Enter your Name"
-              name="from_name"
+              name="name"
               required
             />
+
             <label>Your Email</label>
             <input
               type="email"
               placeholder="Enter your Email"
-              name="from_email"
+              name="email"
               required
             />
+
             <label>Write your message here</label>
             <textarea
               name="message"
